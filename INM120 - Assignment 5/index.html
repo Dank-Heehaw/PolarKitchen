@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seasonal comfort food and warm winter hospitality at Polar Kitchen.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Polar Kitchen | Seasonal Comfort Food</title>
+</head>
+<body id="top">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Polar Kitchen home">
+            <img src="assets/images/Logo.svg" alt="" width="64" height="64">
+            <span>Polar Kitchen</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+            <span class="sr-only">Open navigation</span>
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="main-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a class="nav-link active" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#menu">Menu</a></li>
+                <li><a class="nav-link" href="#reservations">Reservations</a></li>
+                <li><a class="nav-link" href="#about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" id="home">
+            <img class="hero-image" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=2000&amp;q=85" alt="A warmly lit restaurant dining room">
+            <div class="hero-overlay"></div>
+            <div class="hero-content reveal">
+                <p class="eyebrow">Seasonal dining in Winterville</p>
+                <h1>Warm up with winter flavours</h1>
+                <p>Step into Polar Kitchen, where winter magic meets comforting cuisine, thoughtful hospitality, and memorable evenings.</p>
+                <div class="hero-actions">
+                    <button class="button button-primary open-reservation" type="button">Reserve a table</button>
+                    <a class="button button-secondary" href="#menu">Explore our menu</a>
+                </div>
+            </div>
+            <a class="scroll-cue" href="#menu" aria-label="Scroll to our menu"><span></span></a>
+        </section>
+
+        <section class="menu-section section" id="menu">
+            <div class="section-heading reveal">
+                <p class="eyebrow">From our kitchen</p>
+                <h2>Signature winter creations</h2>
+                <p>Fresh ingredients, bold flavours, and comforting favourites made for gathering together.</p>
+            </div>
+
+            <div class="menu-grid">
+                <article class="dish-card reveal">
+                    <div class="dish-image"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Pan-seared salmon with seasonal vegetables" loading="lazy"></div>
+                    <div class="dish-copy"><h3>Signature Arctic Salmon</h3><p>Pan-seared salmon with delicate lemon-butter sauce and seasonal greens.</p><span class="price">$29</span></div>
+                </article>
+                <article class="dish-card reveal">
+                    <div class="dish-image"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Grilled steak with roasted vegetables" loading="lazy"></div>
+                    <div class="dish-copy"><h3>Northern Grilled Steak</h3><p>Tender grilled steak paired with rich lingonberry sauce and roasted vegetables.</p><span class="price">$34</span></div>
+                </article>
+                <article class="dish-card reveal">
+                    <div class="dish-image"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Beef burger with lettuce and house sauce" loading="lazy"></div>
+                    <div class="dish-copy"><h3>Polar Kitchen Burger</h3><p>Locally sourced beef, crisp lettuce, aged cheddar, and our signature sauce.</p><span class="price">$22</span></div>
+                </article>
+                <article class="dish-card reveal">
+                    <div class="dish-image"><img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Creamy chowder served in a ceramic bowl" loading="lazy"></div>
+                    <div class="dish-copy"><h3>Glacial Cod Chowder</h3><p>Creamy chowder with flaky cod, tender potatoes, fresh herbs, and dill.</p><span class="price">$18</span></div>
+                </article>
+                <article class="dish-card reveal">
+                    <div class="dish-image"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Cheesecake topped with fresh berries" loading="lazy"></div>
+                    <div class="dish-copy"><h3>Frosted Berry Cheesecake</h3><p>Silky vanilla cheesecake topped with fresh berries and a crisp biscuit crust.</p><span class="price">$12</span></div>
+                </article>
+                <article class="dish-card reveal">
+                    <div class="dish-image"><img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Roast chicken with herbs and vegetables" loading="lazy"></div>
+                    <div class="dish-copy"><h3>Maple-Glazed Chicken</h3><p>Roast chicken with maple glaze, winter root vegetables, and fresh thyme.</p><span class="price">$27</span></div>
+                </article>
+                <article class="dish-card reveal">
+                    <div class="dish-image"><img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Creamy pasta with mushrooms and herbs" loading="lazy"></div>
+                    <div class="dish-copy"><h3>Creamy Mushroom Pasta</h3><p>Al dente pasta in a rich mushroom cream sauce, finished with fresh herbs.</p><span class="price">$23</span></div>
+                </article>
+                <article class="dish-card reveal">
+                    <div class="dish-image"><img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Chicken tacos with salsa, avocado, and lime" loading="lazy"></div>
+                    <div class="dish-copy"><h3>Spicy Chicken Tacos</h3><p>Grilled chicken, bright salsa, avocado, cilantro, and fresh lime.</p><span class="price">$20</span></div>
+                </article>
+                <article class="dish-card reveal">
+                    <div class="dish-image"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Warm chocolate cake with a molten centre" loading="lazy"></div>
+                    <div class="dish-copy"><h3>Chocolate Lava Cake</h3><p>Warm chocolate cake with a molten centre and vanilla bean ice cream.</p><span class="price">$13</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="reservation-section section" id="reservations">
+            <div class="reservation-copy reveal">
+                <p class="eyebrow">Your table awaits</p>
+                <h2>Make tonight feel special</h2>
+                <p>Join us for a relaxed dinner, a celebration, or simply a warm escape from the cold.</p>
+                <button class="button button-primary open-reservation" type="button">Make a reservation</button>
+            </div>
+        </section>
+
+        <section class="about-section section" id="about">
+            <div class="about-card reveal">
+                <p class="eyebrow">Our story</p>
+                <h2>Warm hospitality, inspired by the North</h2>
+                <p>Polar Kitchen brings people together over seasonal Canadian ingredients and familiar dishes with a modern touch. Every plate is made to feel comforting, generous, and worth sharing.</p>
+                <div class="about-details">
+                    <div><strong>Locally inspired</strong><span>Seasonal Canadian ingredients</span></div>
+                    <div><strong>Made with care</strong><span>Freshly prepared every day</span></div>
+                    <div><strong>Always welcoming</strong><span>Good food for every occasion</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div><h2>Polar Kitchen</h2><p>Comfort food for cold days and warm memories.</p></div>
+            <div><h3>Visit</h3><address>123 Frost Avenue, Suite 10<br>Winterville, ON M5P 2R3</address></div>
+            <div><h3>Hours</h3><p>Mon–Fri: 11 AM–10 PM<br>Sat–Sun: 10 AM–11 PM</p></div>
+            <div><h3>Contact</h3><p><a href="tel:+15551234567">(555) 123-4567</a><br><a href="mailto:info@polarkitchen.ca">info@polarkitchen.ca</a></p></div>
+        </div>
+        <div class="footer-bottom"><p>Site by Abdul Waheed Khan Sowdagar</p><p>&copy; <span id="year"></span> Polar Kitchen</p></div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+    <dialog class="reservation-dialog" aria-labelledby="reservation-title">
+        <button class="dialog-close" type="button" aria-label="Close reservation form">×</button>
+        <div class="dialog-heading">
+            <p class="eyebrow">Polar Kitchen</p>
+            <h2 id="reservation-title">Reserve your table</h2>
+            <p>Complete the details below and we’ll hold your table.</p>
+        </div>
+        <form id="reservation-form">
+            <label>Full name<input type="text" name="name" autocomplete="name" required></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+            <div class="form-row">
+                <label>Date<input type="date" name="date" required></label>
+                <label>Time<select name="time" required><option value="">Select</option><option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option></select></label>
+            </div>
+            <label>Party size<select name="guests" required><option value="">Select guests</option><option>1 guest</option><option>2 guests</option><option>3 guests</option><option>4 guests</option><option>5 guests</option><option>6+ guests</option></select></label>
+            <button class="button button-primary" type="submit">Confirm reservation</button>
+            <p class="form-message" role="status" aria-live="polite"></p>
+        </form>
+    </dialog>
+</body>
+</html>

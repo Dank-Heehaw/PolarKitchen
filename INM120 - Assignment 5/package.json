@@ -1,0 +1,14 @@
+{
+  "name": "inm120---assignment-5",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "lite-server"
+  },
+  "author": "Abdul Waheed Khan Sowdagar",
+  "license": "ISC",
+  "description": "Responsive Polar Kitchen restaurant website",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
