@@ -88,8 +88,9 @@ img {
     height: 82px;
     justify-content: space-between;
     padding: 0 clamp(1rem, 5vw, 5rem);
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 100;
 }
 
@@ -137,7 +138,8 @@ img {
 }
 
 .nav-link:hover::after,
-.nav-link.active::after {
+.nav-link.active::after,
+#main-navigation li.active .nav-link::after {
     transform: scaleX(1);
     transform-origin: left;
 }
@@ -164,9 +166,9 @@ img {
 .hero {
     align-items: center;
     display: flex;
-    min-height: calc(100svh - 82px);
+    min-height: 100svh;
     overflow: hidden;
-    padding: clamp(3rem, 8vw, 7rem);
+    padding: calc(82px + clamp(2rem, 6vw, 5rem)) clamp(3rem, 8vw, 7rem) clamp(3rem, 8vw, 7rem);
     position: relative;
 }
 
@@ -179,7 +181,6 @@ img {
 }
 
 .hero-image {
-    animation: heroZoom 14s ease-out both;
     object-fit: cover;
 }
 
@@ -300,8 +301,31 @@ img {
     width: 5px;
 }
 
-.section {
-    padding: clamp(4.5rem, 9vw, 8rem) clamp(1rem, 5vw, 5rem);
+.section:not(.hero):not(.footer-section) {
+    padding: calc(82px + clamp(2.5rem, 6vw, 5rem)) clamp(1rem, 5vw, 5rem) clamp(3rem, 7vw, 6rem);
+}
+
+.fp-overflow {
+    scrollbar-color: var(--blue) transparent;
+    scrollbar-width: thin;
+    width: 100%;
+}
+
+.fp-scrollable,
+.fp-scroller,
+.slimScrollDiv {
+    width: 100% !important;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: var(--blue);
+}
+
+#fp-nav ul li .fp-tooltip {
+    color: var(--ink);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
 }
 
 .section-heading {
@@ -472,6 +496,13 @@ footer {
     background: #0b3242;
     color: rgba(255, 255, 255, 0.82);
     padding: 4rem clamp(1rem, 5vw, 5rem) 1.5rem;
+}
+
+.footer-section {
+    align-content: center;
+    display: grid;
+    min-height: 100svh;
+    padding-top: calc(82px + 4rem);
 }
 
 .footer-grid {
@@ -655,11 +686,6 @@ footer {
     transform: translateY(0);
 }
 
-@keyframes heroZoom {
-    from { transform: scale(1.08); }
-    to { transform: scale(1); }
-}
-
 @keyframes scrollDot {
     0%, 100% { opacity: 0; transform: translateY(0); }
     30% { opacity: 1; }
@@ -753,8 +779,8 @@ footer {
     }
 
     .hero {
-        min-height: calc(100svh - 70px);
-        padding: 4rem 1.25rem 5rem;
+        min-height: 100svh;
+        padding: calc(70px + 3rem) 1.25rem 5rem;
     }
 
     .hero-overlay {
@@ -806,7 +832,7 @@ footer {
         display: none;
     }
 
-    .section {
+    .section:not(.hero):not(.footer-section) {
         padding-left: 1rem;
         padding-right: 1rem;
     }
