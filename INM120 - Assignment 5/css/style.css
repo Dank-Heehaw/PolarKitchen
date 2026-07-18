@@ -179,7 +179,7 @@ img {
 }
 
 .hero-image {
-    animation: heroZoom 14s ease-out both;
+    animation: heroZoom 7s ease-out both;
     object-fit: cover;
 }
 
@@ -358,12 +358,7 @@ img {
 .dish-image img {
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
     width: 100%;
-}
-
-.dish-card:hover .dish-image img {
-    transform: scale(1.06);
 }
 
 .dish-copy {
@@ -397,7 +392,7 @@ img {
     align-items: center;
     background:
         linear-gradient(rgba(8, 38, 50, 0.68), rgba(8, 38, 50, 0.68)),
-        url("../assets/images/8.jpg") center / cover;
+        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=85") center / cover;
     display: flex;
     justify-content: center;
     min-height: 580px;
