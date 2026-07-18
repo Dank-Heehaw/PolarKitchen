@@ -351,21 +351,22 @@ img {
 }
 
 .dish-image {
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
+    background: var(--ice);
 }
 
+/* Natural aspect ratio: width fits the card, height follows the photo */
 .dish-image img {
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     width: 100%;
 }
 
 .dish-copy {
+    align-items: baseline;
+    column-gap: 0.75rem;
     display: grid;
     flex: 1;
     grid-template-columns: 1fr auto;
-    padding: 1.4rem;
+    padding: 1.5rem;
 }
 
 .dish-copy h3 {
@@ -376,16 +377,22 @@ img {
 }
 
 .dish-copy p {
+    border-top: 1px dashed rgba(36, 117, 143, 0.3);
     color: #5b7078;
     font-size: 0.92rem;
     grid-column: 1 / -1;
-    margin-top: 0.7rem;
+    line-height: 1.6;
+    margin-top: 0.9rem;
+    padding-top: 0.9rem;
 }
 
 .price {
+    background: rgba(242, 201, 109, 0.25);
+    border-radius: 999px;
     color: var(--blue-dark);
+    font-size: 0.88rem;
     font-weight: 700;
-    margin-left: 0.75rem;
+    padding: 0.25rem 0.75rem;
 }
 
 .reservation-section {
@@ -828,5 +835,205 @@ footer {
     .reveal {
         opacity: 1;
         transform: none;
+    }
+}
+
+/* A/B style toggle */
+.style-toggle {
+    backdrop-filter: blur(8px);
+    background: rgba(11, 50, 66, 0.92);
+    border-radius: 999px;
+    bottom: 1.25rem;
+    box-shadow: 0 10px 26px rgba(8, 38, 50, 0.3);
+    display: flex;
+    gap: 0.25rem;
+    left: 1.25rem;
+    padding: 0.3rem;
+    position: fixed;
+    z-index: 90;
+}
+
+.style-toggle button {
+    background: transparent;
+    border: 0;
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 0.45rem 0.95rem;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.style-toggle button[aria-pressed="true"] {
+    background: var(--gold);
+    color: var(--ink);
+}
+
+/* Variant B: dark artisan style */
+body.variant-b {
+    background: #16110d;
+    color: #e8ded2;
+}
+
+body.variant-b .site-header {
+    background: rgba(22, 17, 13, 0.94);
+    border-bottom-color: rgba(224, 164, 88, 0.28);
+}
+
+body.variant-b .brand,
+body.variant-b .nav-link {
+    color: #f0e6d8;
+}
+
+body.variant-b .nav-link::after {
+    background: #e0a458;
+}
+
+body.variant-b .menu-toggle span:not(.sr-only) {
+    background: #f0e6d8;
+}
+
+body.variant-b .hero-overlay {
+    background:
+        linear-gradient(90deg, rgba(18, 10, 4, 0.88) 0%, rgba(18, 10, 4, 0.55) 48%, rgba(18, 10, 4, 0.2) 100%),
+        linear-gradient(0deg, rgba(18, 10, 4, 0.45), transparent 45%);
+}
+
+body.variant-b .eyebrow {
+    color: #e0a458;
+}
+
+body.variant-b .button-primary {
+    background: #e0a458;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    color: #241a10;
+}
+
+body.variant-b .button-primary:hover {
+    background: #edb96f;
+}
+
+body.variant-b .menu-section {
+    background: #16110d;
+}
+
+body.variant-b .section-heading h2,
+body.variant-b .about-card h2 {
+    color: #f5ead9;
+}
+
+body.variant-b .section-heading > p:last-child {
+    color: #b7a894;
+}
+
+body.variant-b .dish-card {
+    background: #211a14;
+    border-color: rgba(224, 164, 88, 0.16);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4);
+}
+
+body.variant-b .dish-card:hover {
+    border-color: rgba(224, 164, 88, 0.45);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.55);
+}
+
+body.variant-b .dish-image {
+    background: #2a221b;
+}
+
+/* Reference layout: price above an uppercase dish name */
+body.variant-b .dish-copy {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+body.variant-b .dish-copy h3 {
+    color: #f5ead9;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+body.variant-b .price {
+    background: transparent;
+    color: #e0a458;
+    font-size: 1.2rem;
+    order: -1;
+    padding: 0;
+}
+
+body.variant-b .dish-copy p {
+    border-top-color: rgba(224, 164, 88, 0.25);
+    color: #b7a894;
+    margin-top: 0.65rem;
+    padding-top: 0.75rem;
+    width: 100%;
+}
+
+body.variant-b .about-section {
+    background: #1b1510;
+}
+
+body.variant-b .about-card {
+    background: #211a14;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+}
+
+body.variant-b .about-card > p:not(.eyebrow) {
+    color: #b7a894;
+}
+
+body.variant-b .about-details div {
+    border-top-color: #e0a458;
+}
+
+body.variant-b .about-details strong {
+    color: #e0a458;
+}
+
+body.variant-b .about-details span {
+    color: #b7a894;
+}
+
+body.variant-b footer {
+    background: #0f0b08;
+}
+
+body.variant-b .footer-grid h3 {
+    color: #e0a458;
+}
+
+body.variant-b .footer-grid a:hover {
+    color: #e0a458;
+}
+
+body.variant-b .back-to-top {
+    background: #e0a458;
+    color: #241a10;
+}
+
+body.variant-b .back-to-top:hover {
+    background: #edb96f;
+}
+
+body.variant-b .style-toggle {
+    background: rgba(33, 26, 20, 0.94);
+}
+
+body.variant-b .style-toggle button[aria-pressed="true"] {
+    background: #e0a458;
+    color: #241a10;
+}
+
+@media (max-width: 760px) {
+    body.variant-b #main-navigation {
+        background: #1d1712;
+        border-bottom-color: rgba(224, 164, 88, 0.25);
     }
 }

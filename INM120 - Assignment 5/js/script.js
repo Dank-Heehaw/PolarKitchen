@@ -99,3 +99,19 @@ reservationForm.addEventListener("submit", (event) => {
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+const styleButtons = document.querySelectorAll(".style-toggle button");
+
+const applyVariant = (variant) => {
+    document.body.classList.toggle("variant-b", variant === "b");
+    styleButtons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.variant === variant));
+    });
+    localStorage.setItem("polar-kitchen-style", variant);
+};
+
+styleButtons.forEach((button) => {
+    button.addEventListener("click", () => applyVariant(button.dataset.variant));
+});
+
+applyVariant(localStorage.getItem("polar-kitchen-style") === "b" ? "b" : "a");
